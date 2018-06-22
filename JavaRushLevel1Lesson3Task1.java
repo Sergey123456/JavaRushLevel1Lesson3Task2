@@ -25,9 +25,7 @@ public class JavaRushLevel1Lesson3Task1 {
 		do {
 			System.out.print("Введите слово: "); // ЗАГАДАННОЕ СЛОВО
 			n = sc.nextLine();
-			if (n.equals("")) {
-				System.out.println("Вы не ввели ничего! Попробуйте ещё раз!");
-			} else if (n.equals(word)) {
+			if (n.equals(word)) {
 				 System.out.println("Вы угадали! Поздравляем! Приходите ещё!");
 				 quit = true;
 			} else {
@@ -36,10 +34,7 @@ public class JavaRushLevel1Lesson3Task1 {
 				int	wordLenght	= word.length(),
 						nLenght		= n.length();
 				for (int i = 0; i < 15; i++) {
-					System.out.print(i < wordLenght 
-							  && i < nLenght 
-							  && word.charAt(i) == n.charAt(i) 
-							  ? word.charAt(i) : "#");
+					System.out.print(i < wordLenght && i < nLenght && word.charAt(i) == n.charAt(i) ? word.charAt(i) : "#");
 				}
 				System.out.println();
 				quit = quitMenu();
